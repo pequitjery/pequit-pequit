@@ -1,0 +1,137 @@
+<section id="home-section" class="hero">
+  <div class="hero__content">
+    <p class="eyebrow">Creative digital studio</p>
+    <h1>Build bold ideas into unforgettable digital experiences.</h1>
+    <p class="lead">
+      We help brands turn strategy into launch-ready products, polished websites, and memorable
+      customer journeys.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#projects" class="button button--primary">View projects</a>
+      <a href="#contact" class="button button--secondary">Book a call</a>
+    </div>
+
+    <ul class="hero__stats">
+      <li>
+        <strong>8+</strong>
+        <span>Years building</span>
+      </li>
+      <li>
+        <strong>40+</strong>
+        <span>Projects shipped</span>
+      </li>
+      <li>
+        <strong>100%</strong>
+        <span>Custom strategy</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    padding: 5rem 1.5rem 4rem;
+    background: linear-gradient(180deg, rgba(8, 17, 31, 0.7), rgba(8, 17, 31, 0.95));
+  }
+
+  .hero__content {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.73rem;
+    color: #8fc2ff;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+  }
+
+  .lead {
+    max-width: 650px;
+    margin-top: 1.5rem;
+    font-size: 1.12rem;
+    line-height: 1.8;
+    color: #cfe0ff;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.45rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-1px);
+  }
+
+  .button--primary {
+    background: linear-gradient(135deg, #7cc7ff, #6c7dff);
+    color: #08111f;
+  }
+
+  .button--secondary {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.02);
+    color: #edf4ff;
+  }
+
+  .hero__stats {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 3rem 0 0;
+    max-width: 620px;
+  }
+
+  .hero__stats li {
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .hero__stats strong {
+    display: block;
+    font-size: 1.7rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero__stats span {
+    color: #cfe0ff;
+    font-size: 0.88rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero__stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

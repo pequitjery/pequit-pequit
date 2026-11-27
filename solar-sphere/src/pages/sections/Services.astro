@@ -1,0 +1,101 @@
+<section id="services" class="services">
+  <div class="section-heading">
+    <p class="eyebrow">Services</p>
+    <h2>Everything your brand needs to grow online.</h2>
+  </div>
+
+  <div class="service-grid">
+    <article class="service-card">
+      <span>01</span>
+      <h3>Brand Strategy</h3>
+      <p>Positioning, messaging, and clear direction to make your brand easier to trust and remember.</p>
+    </article>
+
+    <article class="service-card">
+      <span>02</span>
+      <h3>Web Design</h3>
+      <p>Clean, conversion-focused design systems that feel premium and work beautifully across devices.</p>
+    </article>
+
+    <article class="service-card">
+      <span>03</span>
+      <h3>Development</h3>
+      <p>Fast, accessible, responsive builds that turn design into a polished product experience.</p>
+    </article>
+
+    <article class="service-card">
+      <span>04</span>
+      <h3>Optimization</h3>
+      <p>Ongoing refinement for clarity, performance, and user experience after launch.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #8fc2ff;
+    font-size: 0.72rem;
+    margin: 0 0 0.8rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .service-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    padding: 1.5rem;
+  }
+
+  .service-card span {
+    display: inline-block;
+    color: #8fc2ff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .service-card p {
+    margin: 0;
+    color: #dfeaff;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .service-grid {
+      grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

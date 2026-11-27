@@ -1,0 +1,110 @@
+<section id="projects" class="projects">
+  <div class="section-heading">
+    <p class="eyebrow">Projects</p>
+    <h2>Selected work designed to make an impact.</h2>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-card__visual visual-one"></div>
+      <div class="project-card__content">
+        <h3>Northstar Labs</h3>
+        <p>Repositioned a SaaS brand and rebuilt the landing experience to improve lead quality.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__visual visual-two"></div>
+      <div class="project-card__content">
+        <h3>Vanta Studio</h3>
+        <p>Created a premium portfolio experience for a creative studio focused on hospitality brands.</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__visual visual-three"></div>
+      <div class="project-card__content">
+        <h3>Nova Finance</h3>
+        <p>Designed and launched a clearer fintech interface with a stronger conversion path.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #8fc2ff;
+    font-size: 0.72rem;
+    margin: 0 0 0.8rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+  }
+
+  .project-card__visual {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .visual-one {
+    background: linear-gradient(135deg, #7cc7ff, #6d7cff);
+  }
+
+  .visual-two {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+  }
+
+  .visual-three {
+    background: linear-gradient(135deg, #34d399, #10b981);
+  }
+
+  .project-card__content {
+    padding: 1.3rem 1.1rem 1.5rem;
+  }
+
+  .project-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #dfeaff;
+  }
+
+  @media (max-width: 900px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

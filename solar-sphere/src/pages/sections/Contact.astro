@@ -1,0 +1,128 @@
+<section id="contact" class="contact">
+  <div class="contact__card">
+    <p class="eyebrow">Contact</p>
+    <h2>Let’s build something that deserves attention.</h2>
+    <p>
+      Ready to sharpen your brand, improve your product experience, or launch a better website?
+      Let’s talk.
+    </p>
+
+    <form class="contact__form">
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="Your email" required />
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </label>
+
+      <button type="submit" class="contact__submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 6rem;
+  }
+
+  .contact__card {
+    background: linear-gradient(135deg, rgba(124, 199, 255, 0.12), rgba(108, 125, 255, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #8fc2ff;
+    font-size: 0.72rem;
+    margin: 0 0 0.8rem;
+  }
+
+  h2 {
+    margin: 0 auto 1rem;
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 640px;
+    color: #dfeaff;
+    line-height: 1.8;
+  }
+
+  .contact__form {
+    display: grid;
+    max-width: 640px;
+    margin: 2rem auto 0;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .contact__form label {
+    display: grid;
+    gap: 0.5rem;
+    color: #edf4ff;
+    font-weight: 600;
+  }
+
+  .contact__form input,
+  .contact__form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(8, 17, 31, 0.55);
+    color: #edf4ff;
+    font: inherit;
+    padding: 0.85rem 1rem;
+  }
+
+  .contact__form textarea {
+    resize: vertical;
+  }
+
+  .contact__form input:focus,
+  .contact__form textarea:focus {
+    border-color: #8fc2ff;
+    outline: 2px solid rgba(143, 194, 255, 0.2);
+  }
+
+  .contact__submit {
+    justify-self: start;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #7cc7ff, #6c7dff);
+    color: #08111f;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .contact__submit:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 640px) {
+    .contact__submit {
+      width: 100%;
+      justify-self: stretch;
+    }
+  }
+</style>

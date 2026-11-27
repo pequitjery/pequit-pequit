@@ -1,0 +1,191 @@
+---
+import BaseLayout from "../layouts/Base.Layout.astro";
+import Hero from "./sections/Hero.astro";
+import About from "./sections/About.astro";
+import Services from "./sections/Services.astro";
+import Projects from "./sections/Projects.astro";
+import Contact from "./sections/Contact.astro";
+---
+
+<BaseLayout title="Jery Pequitpequit | Creative Digital Studio">
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="brand">Jery Pequitpequit</a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="home">
+      <Hero />
+    </div>
+    <About />
+    <Services />
+    <Projects />
+    <Contact />
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Jery Pequitpequit. All rights reserved.</p>
+    <a href="#home">Back to top</a>
+  </footer>
+
+  <script>
+    import "../scripts/animations";
+
+    const navToggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+    const navLinks = document.querySelector<HTMLElement>("#nav-links");
+
+    navToggle?.addEventListener("click", () => {
+      const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navLinks?.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navToggle?.setAttribute("aria-expanded", "false");
+        navToggle?.setAttribute("aria-label", "Open navigation");
+        navLinks.classList.remove("is-open");
+      });
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .site-header {
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(8, 17, 31, 0.88);
+    backdrop-filter: blur(16px);
+  }
+
+  .nav {
+    width: min(100% - 3rem, 1200px);
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    color: #edf4ff;
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-links a,
+  .footer a {
+    color: #cfe0ff;
+    font-size: 0.92rem;
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover,
+  .footer a:hover {
+    color: #8fc2ff;
+  }
+
+  .nav-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: transparent;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    border-radius: 2px;
+    background: #edf4ff;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: min(100% - 3rem, 1200px);
+    margin: 0 auto;
+    padding: 1.5rem 0 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cfe0ff;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      width: min(100% - 2rem, 1200px);
+      flex-wrap: wrap;
+      min-height: 64px;
+    }
+
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      order: 3;
+      width: 100%;
+      padding: 0.5rem 0 1rem;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .nav-links.is-open {
+      display: flex;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 0.75rem 0;
+    }
+
+    .footer {
+      width: min(100% - 2rem, 1200px);
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>
